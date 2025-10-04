@@ -1,0 +1,65 @@
+.home {
+  height: 34vw;
+  margin: 30px auto;
+  background-image: url("/header_img.png");
+  background-size: cover;
+  position: relative;
+}
+
+.home .home-text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.5vw;
+  max-width: 50%;
+  bottom: 10%;
+  left: 6vw;
+  animation: fadeIn 2s;
+}
+
+.home .home-text h2 {
+  font-size: max(4.5vw, 22px);
+  font-weight: 500;
+  color: white;
+}
+
+.home .home-text p {
+  font-size: 1vw;
+  color: white;
+}
+
+.home .home-text button {
+  border: none;
+  color: #747474;
+  font-weight: 500;
+  padding: 1vw 2.3vw;
+  background-color: white;
+  font-size: max(1vw, 13px);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+@media (max-width: 1050px) {
+  .home {
+    height: 38vw;
+  }
+
+  .home-text {
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 750px) {
+  .home-text {
+    max-width: 55%;
+  }
+
+  .home-text p {
+    display: none;
+  }
+
+  .home-text button {
+    padding: 2vw 4vw;
+  }
+}
