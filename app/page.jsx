@@ -22,17 +22,15 @@ const page = () => {
     <>
       {showLogin && <LoginPopup setShowLogin={setShowLogin} />}
 
-      <StoreContextProvider>
-        {showSearch && <SearchPopup setShowSearch={setShowSearch} />}
-        <div className="app">
-          <Navbar setShowLogin={setShowLogin} setShowSearch={setShowSearch} />
-          <Home />
-          <Menu category={category} setCategory={setCategory} />
-          <FoodDisplay categoray={category} />
-          <AppDownload />
-        </div>
-        <Footer />
-      </StoreContextProvider>
+      {showSearch && <SearchPopup setShowSearch={setShowSearch} />}
+      <div className="app">
+        <Navbar setShowLogin={setShowLogin} setShowSearch={setShowSearch} />
+        <Home />
+        <Menu category={category} setCategory={setCategory} />
+        <FoodDisplay categoray={category} />
+        <AppDownload />
+      </div>
+      <Footer />
     </>
   );
 };

@@ -3,6 +3,7 @@ import React, { use } from "react";
 import "./Navbar.css";
 import { useState } from "react";
 import { assets } from "@/assets/assets";
+import Cart from "../../app/Cart/page";
 import Link from "next/link";
 
 const Navbar = ({ setShowLogin, setShowSearch }) => {
@@ -59,7 +60,9 @@ const Navbar = ({ setShowLogin, setShowSearch }) => {
           alt="Search-Icon"
           onClick={() => setShowSearch(true)}
         />
-        <img src={assets.basket_icon.src} alt="Basket-Icon" />
+        <Link href="/Cart">
+          <img src={assets.basket_icon.src} alt="Basket-Icon" />
+        </Link>
         <button
           onClick={() => {
             setShowLogin(true);

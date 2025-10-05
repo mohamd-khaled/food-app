@@ -1,0 +1,119 @@
+.cart {
+  margin-top: 100px;
+}
+
+.data {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+  align-items: center;
+  color: gray;
+  font-size: max(1vw, 12px);
+}
+
+.food .item {
+  margin: 10px;
+  color: black;
+}
+
+.food .item img {
+  width: 60px;
+}
+hr {
+  height: 1px;
+  background-color: #e2e2e2;
+  border: none;
+}
+
+.food hr {
+  height: 1px;
+  background-color: black;
+  border: none;
+}
+
+.bottom {
+  display: flex;
+  margin: 50px 0;
+}
+
+.bottom .cart-total {
+  margin-right: 200px;
+  width: 50%;
+}
+
+.cart-details {
+  display: flex;
+  color: gray;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.total {
+  color: black;
+}
+
+.total-button,
+.submit-button {
+  margin-top: 20px;
+  padding: 20px 40px;
+  border: none;
+  background-color: tomato;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.total-button:hover,
+.submit-button:hover {
+  background-color: transparent;
+  color: black;
+  border: 0.5px solid tomato;
+}
+
+.bottom .cart-promo {
+  width: 50%;
+}
+
+.cart-promo input {
+  padding: 15px 10px;
+  border: 1px solid tomato;
+  border-radius: 10px;
+  width: 60%;
+}
+
+.submit-button {
+  font-size: 14px;
+  padding: 15px 10px;
+  margin-left: 5px;
+  width: 20%;
+}
+
+@media (max-width: 750px) {
+  .food .item img {
+    width: 30px;
+  }
+
+  .bottom {
+    flex-direction: column-reverse;
+  }
+
+  .bottom .cart-total,
+  .bottom .cart-promo {
+    width: 100%;
+  }
+
+  .bottom .cart-total {
+    margin-top: 20px;
+  }
+
+  .bottom .cart-promo p {
+    font-size: 14px;
+    margin-bottom: -6px;
+  }
+
+  .bottom .cart-promo .submit-button {
+    width: 30%;
+  }
+}
